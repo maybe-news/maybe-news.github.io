@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://www.maybe.news/issues</id>
+    <title>Maybe News</title>
+    <updated>2021-03-23T04:30:00.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://www.maybe.news/issues"/>
+    <subtitle>Maybe News</subtitle>
+    <icon>https://www.maybe.news/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[Issue #9]]></title>
+        <id>Issue #9</id>
+        <link href="https://www.maybe.news/issues/9"/>
+        <updated>2021-03-23T04:30:00.000Z</updated>
+        <summary type="html"><![CDATA[本期关键词：Delos、Virtual Consensus、Elastic Horovod、OpenAI K8s、Late Troubles]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Issue #8]]></title>
+        <id>Issue #8</id>
+        <link href="https://www.maybe.news/issues/8"/>
+        <updated>2021-02-04T02:07:06.000Z</updated>
+        <summary type="html"><![CDATA[本期关键词：GFS、Colossus、Streaming Storage、lakeFS、Magnet、Go+]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Issue #7]]></title>
+        <id>Issue #7</id>
+        <link href="https://www.maybe.news/issues/7"/>
+        <updated>2020-11-15T08:37:20.000Z</updated>
+        <summary type="html"><![CDATA[本期关键词：Delta Lake、Delta Engine、Iceberg、Hudi、Ring Allreduce、TensorFlow Recommenders]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Issue #6]]></title>
+        <id>Issue #6</id>
+        <link href="https://www.maybe.news/issues/6"/>
+        <updated>2020-09-15T10:54:00.000Z</updated>
+        <summary type="html"><![CDATA[本期关键词：Presto、Spark shuffle、Facebook Cosco、Federated Learning、Distributed file system]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Issue #5]]></title>
+        <id>Issue #5</id>
+        <link href="https://www.maybe.news/issues/5"/>
+        <updated>2020-07-21T06:08:28.000Z</updated>
+        <summary type="html"><![CDATA[本期关键词：DynamicEmbedding、Generics again、Fiber、NFS、Kale、Spark dynamic allocation、Boiled Hippo]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Issue #4]]></title>
+        <id>Issue #4</id>
+        <link href="https://www.maybe.news/issues/4"/>
+        <updated>2020-06-17T06:07:52.000Z</updated>
+        <summary type="html"><![CDATA[本期关键词：AliGraph、Monorepo、Docker image、Go interface、Guitar tab]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Issue #3]]></title>
+        <id>Issue #3</id>
+        <link href="https://www.maybe.news/issues/3"/>
+        <updated>2020-06-10T09:37:27.000Z</updated>
+        <summary type="html"><![CDATA[本期关键词：OLAP、ByteKV、GPU share、DL paper、TensorFlow dev]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Issue #2]]></title>
+        <id>Issue #2</id>
+        <link href="https://www.maybe.news/issues/2"/>
+        <updated>2020-06-02T01:25:45.000Z</updated>
+        <summary type="html"><![CDATA[本期关键词：Raft、Generics、OAM、K8s Scheduling]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Issue #1]]></title>
+        <id>Issue #1</id>
+        <link href="https://www.maybe.news/issues/1"/>
+        <updated>2020-05-21T09:34:22.000Z</updated>
+        <summary type="html"><![CDATA[本期关键词：CFS、TensorFlow、Alluxio、Rob Pike、Shoegaze]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Issue #0]]></title>
+        <id>Issue #0</id>
+        <link href="https://www.maybe.news/issues/0"/>
+        <updated>2020-05-11T06:44:52.000Z</updated>
+        <summary type="html"><![CDATA[本期关键词：LightRec、TFRT、MLOps、Mid-stack inlining、Uber’s Microservice]]></summary>
+    </entry>
+</feed>
