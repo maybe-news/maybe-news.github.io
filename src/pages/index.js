@@ -129,7 +129,7 @@ export default function Home() {
       </header>
       <main>
         <MailchimpSubscribe
-          url="https:news.us18.list-manage.com/subscribe/post?u=013b62af8e756cabe51db0038&id=fc8cfd980b"
+          url="https://news.us18.list-manage.com/subscribe/post?u=013b62af8e756cabe51db0038&id=fc8cfd980b"
           render={({ subscribe, status, message }) => (
             <CustomForm
               status={status}
