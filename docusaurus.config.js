@@ -77,6 +77,9 @@ module.exports = {
       ],
       copyright: `Copyright © ${new Date().getFullYear()} Maybe News. Built with Docusaurus.`,
     },
+    googleAnalytics: {
+      trackingID: 'UA-26507501-4',
+    },
   },
   presets: [
     [
@@ -96,9 +99,6 @@ module.exports = {
             title: 'Maybe News',
             description: 'Maybe News',
           },
-        },
-        googleAnalytics: {
-          trackingID: 'UA-26507501-4',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
