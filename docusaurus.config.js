@@ -2,7 +2,7 @@
 module.exports = {
   title: 'Maybe News',
   tagline: '可能是新闻的知识',
-  url: 'https://maybe.news',
+  url: 'https://www.maybe.news',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -96,6 +96,9 @@ module.exports = {
             title: 'Maybe News',
             description: 'Maybe News',
           },
+        },
+        googleAnalytics: {
+          trackingID: 'UA-26507501-4',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),

@@ -11,10 +11,12 @@ import BlogPostPaginator from '@theme/BlogPostPaginator';
 import BlogSidebar from '@theme/BlogSidebar';
 import TOC from '@theme/TOC';
 import EditThisPage from '@theme/EditThisPage';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import { DiscussionEmbed } from 'disqus-react';
 import styles from './styles.module.css';
 
 function BlogPostPage(props) {
+  const {siteConfig} = useDocusaurusContext();
   const {content: BlogPostContents, sidebar} = props;
   const {frontMatter, metadata} = BlogPostContents;
   const {title, description, nextItem, prevItem, editUrl, permalink} = metadata;
@@ -48,7 +50,7 @@ function BlogPostPage(props) {
                   shortname='maybe-news'
                   config={
                     {
-                      url: permalink,
+                      url: siteConfig.url + permalink,
                       title: title,
                       identifier: permalink,
                     }
