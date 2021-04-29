@@ -4,9 +4,16 @@
         <title>Maybe News</title>
         <link>https://www.maybe.news/issues</link>
         <description>Maybe News</description>
-        <lastBuildDate>Tue, 23 Mar 2021 04:30:00 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 29 Apr 2021 08:50:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
+        <item>
+            <title><![CDATA[Issue #10]]></title>
+            <link>https://www.maybe.news/issues/10</link>
+            <guid>Issue #10</guid>
+            <pubDate>Thu, 29 Apr 2021 08:50:00 GMT</pubDate>
+            <description><![CDATA[本期关键词：Tectonic、Redlock、Flexible Paxos、明天的盐]]></description>
+        </item>
         <item>
             <title><![CDATA[Issue #9]]></title>
             <link>https://www.maybe.news/issues/9</link>
