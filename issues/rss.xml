@@ -4,9 +4,16 @@
         <title>Maybe News</title>
         <link>https://www.maybe.news/issues</link>
         <description>Maybe News</description>
-        <lastBuildDate>Thu, 08 Jul 2021 05:10:00 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 15 Oct 2021 05:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
+        <item>
+            <title><![CDATA[Issue #12]]></title>
+            <link>https://www.maybe.news/issues/12</link>
+            <guid>Issue #12</guid>
+            <pubDate>Fri, 15 Oct 2021 05:00:00 GMT</pubDate>
+            <description><![CDATA[本期关键词：Paxos、InfluxDB IOx、16bit 音乐]]></description>
+        </item>
         <item>
             <title><![CDATA[Issue #11]]></title>
             <link>https://www.maybe.news/issues/11</link>
