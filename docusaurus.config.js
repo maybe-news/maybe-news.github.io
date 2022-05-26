@@ -24,6 +24,7 @@ module.exports = {
       // },
       items: [
         {to: 'issues', label: 'Issues', position: 'left', activeBasePath: 'issues'},
+        {to: 'sponsor', label: 'Sponsor', position: 'left'},
         {to: 'about', label: 'About', position: 'left'},
         // {
         //   href: 'https://github.com/facebook/docusaurus',
