@@ -71,6 +71,8 @@ P.S. 2022 年 5 月 17 日上海市政府[宣布](https://mp.weixin.qq.com/s/9gR
 
 P.P.S. 2022 年 5 月 29 日上海市政府公布了[《上海市加快经济恢复和重振行动方案》](https://mp.weixin.qq.com/s/dxBB9jvk_yckTs29PVB1Tw)
 
+P.P.P.S. 2022 年 5 月 31 日上海市政府[宣布](https://mp.weixin.qq.com/s/4dZErfcWAFp6V5bdAfajbg)自 6 月 1 日起，进入全面恢复全市正常生产生活秩序阶段，全面实施疫情防控常态化管理。
+
 ## 延伸阅读、聆听、观看
 - [Reddit：上海疫情下的信息和互助整理](https://www.reddit.com/r/China_irl/comments/tz4bct/%E4%B8%8A%E6%B5%B7%E7%96%AB%E6%83%85%E4%B8%8B%E7%9A%84%E4%BF%A1%E6%81%AF%E5%92%8C%E4%BA%92%E5%8A%A9%E6%95%B4%E7%90%86/)
 - [Leona Cheng：我在方舱医院的真实经历](https://mp.weixin.qq.com/s/myNgBMgideMQiaJGOpSyBA)
