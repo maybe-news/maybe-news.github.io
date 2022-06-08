@@ -9,6 +9,7 @@ module.exports = {
   favicon: 'img/favicon.ico',
   organizationName: 'maybe-news', // Usually your GitHub org/user name.
   projectName: 'maybe-news.github.io', // Usually your repo name.
+  deploymentBranch: 'master',
   stylesheets: [
     'https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i,900,900i|Nanum+Gothic+Coding:400,400i,700,700i,900,900i|Neuton:400,400i,700,700i,900,900i',
   ],
