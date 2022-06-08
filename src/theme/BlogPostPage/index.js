@@ -1,73 +1,110 @@
-/**
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
 import React from 'react';
-import Layout from '@theme/Layout';
+import clsx from 'clsx';
+import {
+  PageMetadata,
+  HtmlClassNameProvider,
+  ThemeClassNames,
+} from '@docusaurus/theme-common';
+import BlogLayout from '@theme/BlogLayout';
 import BlogPostItem from '@theme/BlogPostItem';
 import BlogPostPaginator from '@theme/BlogPostPaginator';
-import BlogSidebar from '@theme/BlogSidebar';
 import TOC from '@theme/TOC';
-import EditThisPage from '@theme/EditThisPage';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import { DiscussionEmbed } from 'disqus-react';
 import styles from './styles.module.css';
-
-function BlogPostPage(props) {
-  const {siteConfig} = useDocusaurusContext();
-  const {content: BlogPostContents, sidebar} = props;
-  const {frontMatter, metadata} = BlogPostContents;
-  const {title, description, nextItem, prevItem, editUrl, permalink} = metadata;
-  const {hide_table_of_contents: hideTableOfContents} = frontMatter;
+function BlogPostPageMetadata(props) {
+  const {content: BlogPostContents} = props;
+  const {assets, metadata} = BlogPostContents;
+  const {title, description, date, tags, authors, frontMatter} = metadata;
+  const {keywords} = frontMatter;
+  const image = assets.image ?? frontMatter.image;
   return (
-    <Layout
+    <PageMetadata
       title={title}
       description={description}
-      wrapperClassName="blog-wrapper">
-      {BlogPostContents && (
-        <div className="container margin-vert--lg">
-          <div className="row">
-            <div className="col col--3">
-              <BlogSidebar sidebar={sidebar} />
-            </div>
-            <main className="col col--7">
-              <BlogPostItem
-                frontMatter={frontMatter}
-                metadata={metadata}
-                isBlogPostPage>
-                <BlogPostContents />
-              </BlogPostItem>
-              <div>{editUrl && <EditThisPage editUrl={editUrl} />}</div>
-              {(nextItem || prevItem) && (
-                <div className="margin-vert--xl">
-                  <BlogPostPaginator nextItem={nextItem} prevItem={prevItem} />
-                </div>
-              )}
-              <div className={styles.commentContainer}>
-                <DiscussionEmbed
-                  shortname='maybe-news'
-                  config={
-                    {
-                      url: siteConfig.url + permalink,
-                      title: title,
-                      identifier: permalink,
-                    }
-                  }
-                />
-              </div>
-            </main>
-            {!hideTableOfContents && BlogPostContents.toc && (
-              <div className="col col--2">
-                <TOC toc={BlogPostContents.toc} />
-              </div>
-            )}
-          </div>
-        </div>
+      keywords={keywords}
+      image={image}>
+      <meta property="og:type" content="article" />
+      <meta property="article:published_time" content={date} />
+      {/* TODO double check those article meta array syntaxes, see https://ogp.me/#array */}
+      {authors.some((author) => author.url) && (
+        <meta
+          property="article:author"
+          content={authors
+            .map((author) => author.url)
+            .filter(Boolean)
+            .join(',')}
+        />
       )}
-    </Layout>
+      {tags.length > 0 && (
+        <meta
+          property="article:tag"
+          content={tags.map((tag) => tag.label).join(',')}
+        />
+      )}
+    </PageMetadata>
   );
 }
+function BlogPostPageContent(props) {
+  const {siteConfig} = useDocusaurusContext();
+  const {content: BlogPostContents, sidebar} = props;
+  const {assets, metadata} = BlogPostContents;
+  const {title, permalink, nextItem, prevItem, frontMatter} = metadata;
+  const {
+    hide_table_of_contents: hideTableOfContents,
+    toc_min_heading_level: tocMinHeadingLevel,
+    toc_max_heading_level: tocMaxHeadingLevel,
+  } = frontMatter;
+  return (
+    <BlogLayout
+      sidebar={sidebar}
+      toc={
+        !hideTableOfContents &&
+        BlogPostContents.toc &&
+        BlogPostContents.toc.length > 0 ? (
+          <TOC
+            toc={BlogPostContents.toc}
+            minHeadingLevel={tocMinHeadingLevel}
+            maxHeadingLevel={tocMaxHeadingLevel}
+          />
+        ) : undefined
+      }>
+      <BlogPostItem
+        frontMatter={frontMatter}
+        assets={assets}
+        metadata={metadata}
+        isBlogPostPage>
+        <BlogPostContents />
+      </BlogPostItem>
 
-export default BlogPostPage;
+      {(nextItem || prevItem) && (
+        <BlogPostPaginator nextItem={nextItem} prevItem={prevItem} />
+      )}
+
+      <div className={styles.commentContainer}>
+        <DiscussionEmbed
+          shortname='maybe-news'
+          config={
+            {
+              url: siteConfig.url + permalink,
+              title: title,
+              identifier: permalink,
+            }
+          }
+        />
+      </div>
+    </BlogLayout>
+  );
+}
+export default function BlogPostPage(props) {
+  return (
+    <HtmlClassNameProvider
+      className={clsx(
+        ThemeClassNames.wrapper.blogPages,
+        ThemeClassNames.page.blogPostPage,
+      )}>
+      <BlogPostPageMetadata {...props} />
+      <BlogPostPageContent {...props} />
+    </HtmlClassNameProvider>
+  );
+}

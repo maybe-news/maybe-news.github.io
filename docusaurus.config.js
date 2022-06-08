@@ -78,9 +78,6 @@ module.exports = {
       ],
       copyright: `Copyright © ${new Date().getFullYear()} Maybe News. Built with Docusaurus.`,
     },
-    googleAnalytics: {
-      trackingID: 'UA-26507501-4',
-    },
   },
   presets: [
     [
@@ -103,6 +100,12 @@ module.exports = {
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
+        },
+        googleAnalytics: {
+          trackingID: 'UA-26507501-4',
+        },
+        gtag: {
+          trackingID: 'G-FS15RZL4X6',
         },
       },
     ],
