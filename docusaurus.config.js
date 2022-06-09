@@ -10,6 +10,7 @@ module.exports = {
   organizationName: 'maybe-news', // Usually your GitHub org/user name.
   projectName: 'maybe-news.github.io', // Usually your repo name.
   deploymentBranch: 'master',
+  trailingSlash: false,
   stylesheets: [
     'https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i,900,900i|Nanum+Gothic+Coding:400,400i,700,700i,900,900i|Neuton:400,400i,700,700i,900,900i',
   ],
@@ -107,6 +108,12 @@ module.exports = {
         },
         gtag: {
           trackingID: 'G-FS15RZL4X6',
+        },
+        sitemap: {
+          changefreq: 'weekly',
+          priority: 0.5,
+          ignorePatterns: ['/tags/**'],
+          filename: 'sitemap.xml',
         },
       },
     ],
