@@ -20,64 +20,22 @@ module.exports = {
     },
     navbar: {
       title: 'Maybe News',
-      // logo: {
-      //   alt: 'Logo',
-      //   src: 'img/logo.svg',
-      // },
       items: [
         {to: 'issues', label: 'Issues', position: 'left', activeBasePath: 'issues'},
+        {
+          type: 'dropdown',
+          label: 'Series',
+          position: 'left',
+          items: [
+            {label: '连接：互联网简史', to: '/series/tags/dail-up'},
+          ],
+        },
         {to: 'sponsor', label: 'Sponsor', position: 'left'},
         {to: 'about', label: 'About', position: 'left'},
-        // {
-        //   href: 'https://github.com/facebook/docusaurus',
-        //   label: 'GitHub',
-        //   position: 'right',
-        // },
       ],
     },
     footer: {
       style: 'dark',
-      links: [
-        // {
-        //   title: 'Docs',
-        //   items: [
-        //     {
-        //       label: 'Getting Started',
-        //       to: 'docs/',
-        //     },
-        //   ],
-        // },
-        // {
-        //   title: 'Community',
-        //   items: [
-        //     {
-        //       label: 'Stack Overflow',
-        //       href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-        //     },
-        //     {
-        //       label: 'Discord',
-        //       href: 'https://discordapp.com/invite/docusaurus',
-        //     },
-        //     {
-        //       label: 'Twitter',
-        //       href: 'https://twitter.com/docusaurus',
-        //     },
-        //   ],
-        // },
-        // {
-        //   title: 'More',
-        //   items: [
-        //     {
-        //       label: 'Blog',
-        //       to: 'blog',
-        //     },
-        //     {
-        //       label: 'GitHub',
-        //       href: 'https://github.com/facebook/docusaurus',
-        //     },
-        //   ],
-        // },
-      ],
       copyright: `Copyright © ${new Date().getFullYear()} Maybe News. Built with Docusaurus.`,
     },
   },
@@ -94,8 +52,8 @@ module.exports = {
           showReadingTime: false,
           feedOptions: {
             type: 'all',
-            title: 'Maybe News',
-            description: 'Maybe News',
+            title: 'Maybe News - Issues',
+            description: '可能是新闻的知识',
           },
         },
         theme: {
@@ -112,6 +70,36 @@ module.exports = {
           priority: 0.5,
           ignorePatterns: ['/tags/**'],
           filename: 'sitemap.xml',
+        },
+      },
+    ],
+  ],
+  plugins: [
+    [
+      '@docusaurus/plugin-content-blog',
+      {
+        /**
+         * Required for any multi-instance plugin
+         */
+        id: 'series',
+        /**
+         * URL route for the blog section of your site.
+         * *DO NOT* include a trailing slash.
+         */
+        routeBasePath: 'series',
+        /**
+         * Path to data on filesystem relative to site dir.
+         */
+        path: './series',
+
+        blogTitle: 'Series',
+        blogSidebarCount: 'ALL',
+        blogSidebarTitle: 'Archives',
+        showReadingTime: false,
+        feedOptions: {
+          type: 'all',
+          title: 'Maybe News - Series',
+          description: '可能是新闻的知识',
         },
       },
     ],
