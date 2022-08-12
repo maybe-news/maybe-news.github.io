@@ -57,7 +57,7 @@ module.exports = {
           },
         },
         theme: {
-          customCss: require.resolve('./src/css/custom.css'),
+          customCss: require.resolve('./src/css/custom.scss'),
         },
         googleAnalytics: {
           trackingID: 'UA-26507501-4',
@@ -75,6 +75,7 @@ module.exports = {
     ],
   ],
   plugins: [
+    'docusaurus-plugin-sass',
     [
       '@docusaurus/plugin-content-blog',
       {

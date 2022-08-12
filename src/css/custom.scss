@@ -7,6 +7,8 @@
 
 /* You can override the default Infima variables here. */
 :root {
+  --subtle: #767676;
+  --rn-note-background: rgba(255, 229, 100, 0.25);
   --ifm-color-primary: #18191a;
   --ifm-color-primary-dark: #161717;
   --ifm-color-primary-darker: #141516;
@@ -35,4 +37,37 @@ a,
   display: block;
   margin: 0 calc(-1 * var(--ifm-pre-padding));
   padding: 0 var(--ifm-pre-padding);
+}
+
+// Copy from https://github.com/facebook/react-native-website/blob/main/website/src/css/customTheme.scss
+.markdown {
+  figure {
+    text-align: center;
+    padding: 8px;
+
+    figcaption {
+      padding: 8px;
+      font-size: 0.9rem;
+      color: var(--subtle);
+
+      code {
+        color: var(--subtle);
+      }
+    }
+  }
+
+  blockquote {
+    border-left: 8px solid var(--ifm-color-primary);
+    padding: 15px 30px 15px 15px;
+    font-style: italic;
+
+    code {
+      background-color: rgba(0, 0, 0, 0.07);
+    }
+
+    a code {
+      background-color: transparent;
+      white-space: pre;
+    }
+  }
 }
