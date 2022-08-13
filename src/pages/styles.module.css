@@ -26,6 +26,11 @@
   font-size: 30px;
 }
 
+.heroButton {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
 .buttons {
   display: flex;
   align-items: center;

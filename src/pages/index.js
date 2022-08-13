@@ -1,9 +1,9 @@
 import React from 'react';
 import clsx from 'clsx';
 import Layout from '@theme/Layout';
-// import Link from '@docusaurus/Link';
+import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-// import useBaseUrl from '@docusaurus/useBaseUrl';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 import MailchimpSubscribe from 'react-mailchimp-subscribe';
 import styles from './styles.module.css';
 
@@ -115,16 +115,24 @@ export default function Home() {
         <div className="container">
           <h1 className={clsx('hero__title', styles.heroTitle)}>{siteConfig.title}</h1>
           <p className={clsx('hero__subtitle', styles.heroSubtitle)}>{siteConfig.tagline}</p>
-          {/* <div className={styles.buttons}> */}
-          {/*   <Link */}
-          {/*     className={clsx( */}
-          {/*       'button button--outline button--secondary button--lg', */}
-          {/*       styles.getStarted, */}
-          {/*     )} */}
-          {/*     to={useBaseUrl('docs/')}> */}
-          {/*     Get Started */}
-          {/*   </Link> */}
-          {/* </div> */}
+          <div className={styles.buttons}>
+            <Link
+              className={clsx(
+                'button button--secondary button--lg',
+                styles.heroButton,
+              )}
+              to={useBaseUrl('issues')}>
+              Issues
+            </Link>
+            <Link
+              className={clsx(
+                'button button--secondary button--lg',
+                styles.heroButton,
+              )}
+              to={useBaseUrl('series')}>
+              Series
+            </Link>
+          </div>
         </div>
       </header>
       <main>

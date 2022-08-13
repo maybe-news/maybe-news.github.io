@@ -8,7 +8,6 @@
 /* You can override the default Infima variables here. */
 :root {
   --subtle: #767676;
-  --rn-note-background: rgba(255, 229, 100, 0.25);
   --ifm-color-primary: #18191a;
   --ifm-color-primary-dark: #161717;
   --ifm-color-primary-darker: #141516;
@@ -23,8 +22,14 @@
 /*   font-family: Neuton, var(--ifm-font-family-base); */
 /* } */
 
-html[data-theme='dark'] {
+[data-theme='dark'] {
   --ifm-color-primary: #4e89e8;
+  --ifm-color-primary-dark: #3377e4;
+  --ifm-color-primary-darker: #256ee3;
+  --ifm-color-primary-darkest: #1959c0;
+  --ifm-color-primary-light: #699bec;
+  --ifm-color-primary-lighter: #77a4ed;
+  --ifm-color-primary-lightest: #a0c0f3;
 }
 
 a,
