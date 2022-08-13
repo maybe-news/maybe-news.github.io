@@ -105,4 +105,18 @@ module.exports = {
       },
     ],
   ],
+  themes: [
+    [
+      '@easyops-cn/docusaurus-search-local',
+      {
+        hashed: true,
+        language: ['en', 'zh'],
+        indexDocs: false,
+        indexBlog: true,
+        blogDir: ['blog', 'series'],
+        blogRouteBasePath: ['/issues', '/series'],
+        searchResultLimits: 10,
+      },
+    ],
+  ],
 };
