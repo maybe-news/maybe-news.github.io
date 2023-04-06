@@ -1,53 +1,48 @@
-/** @type {import('@docusaurus/types').DocusaurusConfig} */
-module.exports = {
+// @ts-check
+// Note: type annotations allow type checking and IDEs autocompletion
+
+const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+const lightCodeTheme = require('prism-react-renderer/themes/github');
+
+/** @type {import('@docusaurus/types').Config} */
+const config = {
   title: 'Maybe News',
   tagline: '可能是新闻的知识',
-  url: 'https://maybe.news',
-  baseUrl: '/',
-  onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
+  trailingSlash: false,
+
+  // Set the production url of your site here
+  url: 'https://maybe.news',
+  // Set the /<baseUrl>/ pathname under which your site is served
+  // For GitHub pages deployment, it is often '/<projectName>/'
+  baseUrl: '/',
+
+  // GitHub pages deployment config.
+  // If you aren't using GitHub pages, you don't need these.
   organizationName: 'maybe-news', // Usually your GitHub org/user name.
   projectName: 'maybe-news.github.io', // Usually your repo name.
+
   deploymentBranch: 'main',
-  trailingSlash: false,
-  stylesheets: [
-    'https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i,900,900i|Nanum+Gothic+Coding:400,400i,700,700i,900,900i|Neuton:400,400i,700,700i,900,900i',
-  ],
-  themeConfig: {
-    colorMode: {
-      defaultMode: 'light',
-    },
-    navbar: {
-      title: 'Maybe News',
-      items: [
-        { to: 'issues', label: 'Issues', position: 'left', activeBasePath: 'issues' },
-        {
-          type: 'dropdown',
-          label: 'Series',
-          position: 'left',
-          items: [
-            { label: '连接：互联网简史', to: '/series/tags/dail-up' },
-          ],
-        },
-        { to: 'sponsor', label: 'Sponsor', position: 'left' },
-        { to: 'about', label: 'About', position: 'left' },
-      ],
-    },
-    footer: {
-      style: 'dark',
-      copyright: `Copyright © ${new Date().getFullYear()} Maybe News. Built with Docusaurus.`,
-    },
+
+  onBrokenLinks: 'throw',
+  onBrokenMarkdownLinks: 'throw',
+
+  // Even if you don't use internalization, you can use this field to set useful
+  // metadata like html lang. For example, if your site is Chinese, you may want
+  // to replace "en" with "zh-Hans".
+  i18n: {
+    defaultLocale: 'en',
+    locales: ['en'],
   },
+
   presets: [
     [
-      '@docusaurus/preset-classic',
-      {
+      'classic',
+      /** @type {import('@docusaurus/preset-classic').Options} */
+      ({
         docs: false,
         blog: {
           blogTitle: 'Issues',
-          // blogSidebarCount: 'ALL',
-          // blogSidebarTitle: 'Archives',
           routeBasePath: 'issues',
           showReadingTime: true,
           feedOptions: {
@@ -69,9 +64,39 @@ module.exports = {
           priority: 0.5,
           filename: 'sitemap.xml',
         },
-      },
+      }),
     ],
   ],
+
+  themeConfig:
+    /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
+    ({
+      navbar: {
+        title: 'Maybe News',
+        items: [
+          { to: 'issues', label: 'Issues', position: 'left', activeBasePath: 'issues' },
+          {
+            type: 'dropdown',
+            label: 'Series',
+            position: 'left',
+            items: [
+              { label: '连接：互联网简史', to: '/series/tags/dail-up' },
+            ],
+          },
+          { to: 'sponsor', label: 'Sponsor', position: 'left' },
+          { to: 'about', label: 'About', position: 'left' },
+        ],
+      },
+      footer: {
+        style: 'dark',
+        copyright: `Copyright © ${new Date().getFullYear()} Maybe News. Built with Docusaurus.`,
+      },
+      prism: {
+        theme: lightCodeTheme,
+        darkTheme: darkCodeTheme,
+      },
+    }),
+
   plugins: [
     'docusaurus-plugin-sass',
     [
@@ -92,9 +117,7 @@ module.exports = {
         path: './series',
 
         blogTitle: 'Series',
-        blogSidebarCount: 'ALL',
-        blogSidebarTitle: 'Archives',
-        showReadingTime: false,
+        showReadingTime: true,
         feedOptions: {
           type: 'all',
           title: 'Maybe News - Series',
@@ -105,6 +128,11 @@ module.exports = {
       },
     ],
   ],
+
+  stylesheets: [
+    'https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i,900,900i|Nanum+Gothic+Coding:400,400i,700,700i,900,900i|Neuton:400,400i,700,700i,900,900i',
+  ],
+
   themes: [
     [
       '@easyops-cn/docusaurus-search-local',
@@ -120,3 +148,5 @@ module.exports = {
     ],
   ],
 };
+
+module.exports = config;
