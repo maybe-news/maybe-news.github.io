@@ -15,6 +15,7 @@
   --ifm-color-primary-light: #1a1c1d;
   --ifm-color-primary-lighter: #1c1d1e;
   --ifm-color-primary-lightest: #1f2122;
+  --ifm-font-size-base: 120%;
   --ifm-code-font-size: 95%;
 }
 
@@ -30,6 +31,12 @@
   --ifm-color-primary-light: #699bec;
   --ifm-color-primary-lighter: #77a4ed;
   --ifm-color-primary-lightest: #a0c0f3;
+}
+
+@media (min-width: 1440px) {
+  .container {
+    max-width: 1440px;
+  }
 }
 
 a,

@@ -2,14 +2,14 @@
 module.exports = {
   title: 'Maybe News',
   tagline: '可能是新闻的知识',
-  url: 'https://www.maybe.news',
+  url: 'https://maybe.news',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
   organizationName: 'maybe-news', // Usually your GitHub org/user name.
   projectName: 'maybe-news.github.io', // Usually your repo name.
-  deploymentBranch: 'master',
+  deploymentBranch: 'main',
   trailingSlash: false,
   stylesheets: [
     'https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i,900,900i|Nanum+Gothic+Coding:400,400i,700,700i,900,900i|Neuton:400,400i,700,700i,900,900i',
@@ -21,17 +21,17 @@ module.exports = {
     navbar: {
       title: 'Maybe News',
       items: [
-        {to: 'issues', label: 'Issues', position: 'left', activeBasePath: 'issues'},
+        { to: 'issues', label: 'Issues', position: 'left', activeBasePath: 'issues' },
         {
           type: 'dropdown',
           label: 'Series',
           position: 'left',
           items: [
-            {label: '连接：互联网简史', to: '/series/tags/dail-up'},
+            { label: '连接：互联网简史', to: '/series/tags/dail-up' },
           ],
         },
-        {to: 'sponsor', label: 'Sponsor', position: 'left'},
-        {to: 'about', label: 'About', position: 'left'},
+        { to: 'sponsor', label: 'Sponsor', position: 'left' },
+        { to: 'about', label: 'About', position: 'left' },
       ],
     },
     footer: {
@@ -46,21 +46,20 @@ module.exports = {
         docs: false,
         blog: {
           blogTitle: 'Issues',
-          blogSidebarCount: 'ALL',
-          blogSidebarTitle: 'Archives',
+          // blogSidebarCount: 'ALL',
+          // blogSidebarTitle: 'Archives',
           routeBasePath: 'issues',
-          showReadingTime: false,
+          showReadingTime: true,
           feedOptions: {
             type: 'all',
             title: 'Maybe News - Issues',
             description: '可能是新闻的知识',
+            language: 'zh-CN',
+            copyright: `Copyright © ${new Date().getFullYear()} Maybe News`,
           },
         },
         theme: {
           customCss: require.resolve('./src/css/custom.scss'),
-        },
-        googleAnalytics: {
-          trackingID: 'UA-26507501-4',
         },
         gtag: {
           trackingID: 'G-FS15RZL4X6',
@@ -68,7 +67,6 @@ module.exports = {
         sitemap: {
           changefreq: 'weekly',
           priority: 0.5,
-          ignorePatterns: ['/tags/**'],
           filename: 'sitemap.xml',
         },
       },
@@ -101,6 +99,8 @@ module.exports = {
           type: 'all',
           title: 'Maybe News - Series',
           description: '可能是新闻的知识',
+          language: 'zh-CN',
+          copyright: `Copyright © ${new Date().getFullYear()} Maybe News`,
         },
       },
     ],
