@@ -1,8 +1,10 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
-const lightCodeTheme = require('prism-react-renderer/themes/github');
+const { themes } = require('prism-react-renderer');
+
+const lightTheme = themes.github;
+const darkTheme = themes.dracula;
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -45,6 +47,7 @@ const config = {
           blogTitle: 'Issues',
           routeBasePath: 'issues',
           showReadingTime: true,
+          onUntruncatedBlogPosts: 'ignore',
           feedOptions: {
             type: 'all',
             title: 'Maybe News - Issues',
@@ -92,8 +95,8 @@ const config = {
         copyright: `Copyright © ${new Date().getFullYear()} Maybe News. Built with Docusaurus.`,
       },
       prism: {
-        theme: lightCodeTheme,
-        darkTheme: darkCodeTheme,
+        theme: lightTheme,
+        darkTheme: darkTheme,
       },
     }),
 
@@ -118,6 +121,7 @@ const config = {
 
         blogTitle: 'Series',
         showReadingTime: true,
+        onUntruncatedBlogPosts: 'ignore',
         feedOptions: {
           type: 'all',
           title: 'Maybe News - Series',
