@@ -1,1 +1,0 @@
-(self.webpackChunkmaybe_news_github_io=self.webpackChunkmaybe_news_github_io||[]).push([[5525],{5525:function(){}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmaybe_news_github_io=self.webpackChunkmaybe_news_github_io||[]).push([[7243],{8162:e=>{e.exports=JSON.parse('{"metadata":{"permalink":"/issues","page":1,"postsPerPage":10,"totalPages":2,"totalCount":16,"nextPage":"/issues/page/2","blogDescription":"Blog","blogTitle":"Issues"}}')}}]);

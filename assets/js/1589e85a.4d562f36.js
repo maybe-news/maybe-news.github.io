@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkmaybe_news_github_io=self.webpackChunkmaybe_news_github_io||[]).push([[5358],{2204:function(s){s.exports=JSON.parse('{"label":"issue","permalink":"/issues/tags/issue","allTagsPath":"/issues/tags","count":14}')}}]);

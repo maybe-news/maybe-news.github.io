@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkmaybe_news_github_io=self.webpackChunkmaybe_news_github_io||[]).push([[9736],{6935:function(e){e.exports=JSON.parse('[{"label":"dail-up","permalink":"/series/tags/dail-up","count":2}]')}}]);

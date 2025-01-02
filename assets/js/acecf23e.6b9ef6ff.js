@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmaybe_news_github_io=self.webpackChunkmaybe_news_github_io||[]).push([[1903],{1912:s=>{s.exports=JSON.parse('{"blogBasePath":"/issues","blogTitle":"Issues","authorsListPath":"/issues/authors"}')}}]);
