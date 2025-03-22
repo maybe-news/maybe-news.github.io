@@ -98,6 +98,10 @@ const config = {
         theme: lightTheme,
         darkTheme: darkTheme,
       },
+      colorMode: {
+        defaultMode: 'dark',
+        disableSwitch: true,
+      },
     }),
 
   plugins: [
