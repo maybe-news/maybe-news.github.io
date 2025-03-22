@@ -1,4 +1,4 @@
-import { DiscussionEmbed } from 'disqus-react';
+import Giscus from '@giscus/react';
 import React from 'react';
 import clsx from 'clsx';
 
@@ -48,15 +48,20 @@ function BlogPostPageContent({ sidebar, children }) {
       )}
 
       <div className={styles.commentContainer}>
-        <DiscussionEmbed
-          shortname='maybe-news'
-          config={
-            {
-              url: siteConfig.url + permalink,
-              title: title,
-              identifier: permalink,
-            }
-          }
+        <Giscus
+          id="comments"
+          repo="maybe-news/maybe-news.github.io"
+          repoId="MDEwOlJlcG9zaXRvcnkzNTc3NzAwODI="
+          category="Announcements"
+          categoryId="DIC_kwDOFVMjYs4CoJCr"
+          mapping="pathname"
+          strict="1"
+          reactionsEnabled="1"
+          emitMetadata="0"
+          inputPosition="top"
+          theme="dark"
+          lang="en"
+          loading="lazy"
         />
       </div>
     </BlogLayout>
